@@ -3,10 +3,10 @@
     include 'config/app.php';
 
     if(isset($_POST['simpan'])) {
-        if(tambah_data($_POST) > 0) {
+        if(tambah_data_rt($_POST) > 0) {
             echo "<script>
                     alert('Data baru berhasil disimpan');
-                    document.location.href = 'form-input-rt.php';
+                    document.location.href = 'table-datatable-rt.php';
                 </script>";
         }else {
             echo "<script>

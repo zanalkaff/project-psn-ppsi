@@ -3,7 +3,7 @@
     $server = "localhost";
     $user ="root";
     $pass ="";
-    $database ="db_psnkebumen_ppsi";
+    $database ="db_psnkebumen";
 
     $con =mysqli_connect($server,$user,$pass,$database);
     if(!$con){

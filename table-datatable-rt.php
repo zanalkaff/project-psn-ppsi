@@ -360,89 +360,49 @@
                                                 <th>Lain-lain Positif</th>
                                             </tr>
                                         </thead>
+
                                         <tbody>
+                                        <?php
+                                        include "config.php";
+                                        $no =1;
+                                        $tampil =mysqli_query($con, "SELECT * FROM data_rt ORDER BY id DESC");
+                                        while($data = mysqli_fetch_array($tampil)):
+
+                                        ?>
                                             <tr>
-                                                <td>1</td>
-                                                <td>23/12/2022</td>
-                                                <td>2</td>
-                                                <td>15</td>
-                                                <td>15</td>
-                                                <td>10</td>
-                                                <td>7</td>
-                                                <td>10</td>
-                                                <td>7</td>
-                                                <td>2</td>
-                                                <td>15</td>
-                                                <td>15</td>
-                                                <td>10</td>
-                                                <td>7</td>
-                                                <td>10</td>
-                                                <td>7</td>
-                                                <td>2</td>
-                                                <td>15</td>
-                                                <td>15</td>
-                                                <td>10</td>
-                                                <td>7</td>
-                                                <td>10</td>
-                                                <td>7</td>
-                                                <td>7</td>
-                                                <td>7</td>
+                                                <td><?= $no++ ?></td>
+                                                <td><?=$data["tanggal"]?></td>
+                                                <td><?=$data["no_rt"]?></td>
+                                                <td><?=$data["jml_rmh_diperiksa"]?></td>
+                                                <td><?=$data["jml_rmh_pstf"]?></td>
+                                                <td><?=$data["jml_bak"]?></td>
+                                                <td><?=$data["jml_bak_ptf"]?></td>
+                                                <td><?=$data["jml_tandon"]?></td>
+                                                <td><?=$data["jml_tandon_pstf"]?></td>
+                                                <td><?=$data["jml_tmpyn"]?></td>
+                                                <td><?=$data["jml_tmpyn_pstf"]?></td>
+                                                <td><?=$data["jml_btl"]?></td>
+                                                <td><?=$data["jml_btl_pstf"]?></td>
+                                                <td><?=$data["jml_brg_bks"]?></td>
+                                                <td><?=$data["jml_brg_bks_pstf"]?></td>
+                                                <td><?=$data["jml_kulkas"]?></td>
+                                                <td><?=$data["jml_kulkas_pstf"]?></td>
+                                                <td><?=$data["jml_vas"]?></td>
+                                                <td><?=$data["jml_vas_pstf"]?></td>
+                                                <td><?=$data["jml_pot"]?></td>
+                                                <td><?=$data["jml_pot_pstf"]?></td>
+                                                <td><?=$data["jml_lain"]?></td>
+                                                <td><?=$data["jml_lain_pstf"]?></td>
+                                                <td><?=$data["jml_dispen"]?></td>
+                                                <td><?=$data["jml_dispen_pstf"]?></td>
+
+                                                
                                             </tr>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>23/12/2022</td>
-                                                <td>2</td>
-                                                <td>15</td>
-                                                <td>15</td>
-                                                <td>10</td>
-                                                <td>7</td>
-                                                <td>10</td>
-                                                <td>7</td>
-                                                <td>2</td>
-                                                <td>15</td>
-                                                <td>15</td>
-                                                <td>10</td>
-                                                <td>7</td>
-                                                <td>10</td>
-                                                <td>7</td>
-                                                <td>2</td>
-                                                <td>15</td>
-                                                <td>15</td>
-                                                <td>10</td>
-                                                <td>7</td>
-                                                <td>10</td>
-                                                <td>7</td>
-                                                <td>7</td>
-                                                <td>7</td>
-                                            </tr>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>23/12/2022</td>
-                                                <td>2</td>
-                                                <td>15</td>
-                                                <td>15</td>
-                                                <td>10</td>
-                                                <td>7</td>
-                                                <td>10</td>
-                                                <td>7</td>
-                                                <td>2</td>
-                                                <td>15</td>
-                                                <td>15</td>
-                                                <td>10</td>
-                                                <td>7</td>
-                                                <td>10</td>
-                                                <td>7</td>
-                                                <td>2</td>
-                                                <td>15</td>
-                                                <td>15</td>
-                                                <td>10</td>
-                                                <td>7</td>
-                                                <td>10</td>
-                                                <td>7</td>
-                                                <td>7</td>
-                                                <td>7</td>
-                                            </tr>
+                                            <?php endwhile; ?>
+                                         
+                                           
                                         </tbody>
+                                        
                                     </table>
                                 </div>
                             </div>
