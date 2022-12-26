@@ -16,6 +16,13 @@
     <!-- Custom CSS -->
     <link href="dist/css/style.min.css" rel="stylesheet">
     <!-- php5 Shim and Respond.js IE8 support of php5 elements and media queries -->
+
+    <!-- yt -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.6.5/css/buttons.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+    <!-- end ty -->
     
 </head>
 
@@ -302,7 +309,7 @@
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb m-0 p-0">
                                     <li class="breadcrumb-item"><a href="index.php" class="text-muted">Home</a></li>
-                                    <li class="breadcrumb-item text-muted active" aria-current="page">Cetak Data RW</li>
+                                    <li class="breadcrumb-item text-muted active" aria-current="page">Cetak Data RT</li>
                                 </ol>
                             </nav>
                         </div>
@@ -319,6 +326,82 @@
                 <!-- ============================================================== -->
                 <!-- Start Page Content -->
                 <!-- ============================================================== -->
+                <div class="table-responsive">
+                <table id="printRW" class="table table-striped table-bordered no-wrap">
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Tanggal</th>
+                                                <th>No RW</th>
+                                                <th>Rumah Diperiksa</th>
+                                                <th>Rumah Positif</th>
+                                                <th>Bak</th>
+                                                <th>Bak Positif</th>
+                                                <th>Tandon</th>
+                                                <th>Tandon Positif</th>
+                                                <th>Tempayan</th>
+                                                <th>Tempayan Positif</th>
+                                                <th>Botol</th>
+                                                <th>Botol Positif</th>
+                                                <th>Barang Bekas</th>
+                                                <th>Barang Bekas Positif</th>
+                                                <th>Kulkas</th>
+                                                <th>Kulkas Positif</th>
+                                                <th>Vas</th>
+                                                <th>Vas Positif</th>
+                                                <th>Pot</th>
+                                                <th>Pot Positif</th>
+                                                <th>Dispenser</th>
+                                                <th>Dispenser Positif</th>
+                                                <th>Lain-lain</th>
+                                                <th>Lain-lain Positif</th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+                                        <?php
+                                        include "config.php";
+                                        $no =1;
+                                        $tampil =mysqli_query($con, "SELECT * FROM data_rw ORDER BY id ASC");
+                                        while($data = mysqli_fetch_array($tampil)):
+
+                                        ?>
+                                            <tr>
+                                                <td><?= $no++ ?></td>
+                                                <td><?php echo $data["tanggal"]?></td>
+                                                <td><?php echo $data["no_rw"]?></td>
+                                                <td><?php echo $data["jml_rmh_diperiksa"]?></td>
+                                                <td><?php echo $data["jml_rmh_pstf"]?></td>
+                                                <td><?php echo $data["jml_bak"]?></td>
+                                                <td><?php echo $data["jml_bak_pstf"]?></td>
+                                                <td><?php echo $data["jml_tandon"]?></td>
+                                                <td><?php echo $data["jml_tandon_pstf"]?></td>
+                                                <td><?php echo $data["jml_tmpyn"]?></td>
+                                                <td><?php echo $data["jml_tmpyn_pstf"]?></td>
+                                                <td><?php echo $data["jml_btl"]?></td>
+                                                <td><?php echo $data["jml_btl_pstf"]?></td>
+                                                <td><?php echo $data["jml_brg_bks"]?></td>
+                                                <td><?php echo $data["jml_brg_bks_pstf"]?></td>
+                                                <td><?php echo $data["jml_kulkas"]?></td>
+                                                <td><?php echo $data["jml_kulkas_pstf"]?></td>
+                                                <td><?php echo $data["jml_vas"]?></td>
+                                                <td><?php echo $data["jml_vas_pstf"]?></td>
+                                                <td><?php echo $data["jml_pot"]?></td>
+                                                <td><?php echo $data["jml_pot_pstf"]?></td>
+                                                <td><?php echo $data["jml_lain"]?></td>
+                                                <td><?php echo $data["jml_lain_pstf"]?></td>
+                                                <td><?php echo $data["jml_dispen"]?></td>
+                                                <td><?php echo $data["jml_dispen_pstf"]?></td>
+
+                                                
+                                            </tr>
+                                            <?php endwhile; ?>
+                                         
+                                           
+                                        </tbody>
+                                        
+                                    </table>
+                                    </div>
                 <!-- ============================================================== -->
                 <!-- End PAge Content -->
                 <!-- ============================================================== -->
@@ -368,6 +451,29 @@
     <!--This page plugins -->
     <script src="assets/extra-libs/datatables.net/js/jquery.dataTables.min.js"></script>
     <script src="dist/js/pages/datatable/datatable-basic.init.js"></script>
+
+    <!-- yt -->
+    <script>
+    $(document).ready(function() {
+        $('#printRW').DataTable( {
+            dom: 'Bfrtip',
+            buttons: [
+                'csv','excel', 'pdf', 'print'
+            ]
+        } );
+    } );
+
+    </script>
+
+    <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.5/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.flash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.print.min.js"></script>
+    <!-- end yt -->
 </body>
 
 </html>

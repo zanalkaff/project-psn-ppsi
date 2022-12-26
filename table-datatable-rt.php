@@ -365,7 +365,7 @@
                                         <?php
                                         include "config.php";
                                         $no =1;
-                                        $tampil =mysqli_query($con, "SELECT * FROM data_rt ORDER BY id DESC");
+                                        $tampil =mysqli_query($con, "SELECT * FROM data_rt ORDER BY id ASC");
                                         while($data = mysqli_fetch_array($tampil)):
 
                                         ?>
