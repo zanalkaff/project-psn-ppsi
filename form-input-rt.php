@@ -1,3 +1,23 @@
+<?php 
+
+    include 'config/app.php';
+
+    if(isset($_POST['simpan'])) {
+        if(tambah_data($_POST) > 0) {
+            echo "<script>
+                    alert('Data baru berhasil disimpan');
+                    document.location.href = 'form-input-rt.php';
+                </script>";
+        }else {
+            echo "<script>
+                alert('Data gagal disimpan');
+                document.location.href = 'form-input-rt.php';
+            </script>";
+        }
+    }
+
+?>
+
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
 
@@ -316,301 +336,253 @@
                 <!-- ============================================================== -->
                 <!-- Start Page Content -->
                 <!-- ============================================================== -->
-                <div class="row">
-                    <div class="col-sm-9 col-md-6 col-lg-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">Tanggal Input</h4>
-                                <form action="form-input-rt.php" class="mt-4" method="post">
+                <form action="" method="post">
+                    <div class="row">
+                        <div class="col-sm-9 col-md-6 col-lg-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">Tanggal Input</h4>
                                     <div class="form-group">
-                                        <input type="date" class="form-control" name="tanggal">
+                                        <input type="date" class="form-control" required name="tanggal">
                                     </div>
-                                </form>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm-9 col-md-6 col-lg-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">No RT</h4>
-                                <form action="form-input-rt.php" class="mt-4" method="post">
+                        <div class="col-sm-9 col-md-6 col-lg-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">No RT</h4>
                                     <div class="form-group">
-                                        <input type="text" class="form-control" name="no_rt">
+                                        <input type="text" class="form-control" required name="no_rt">
                                     </div>
-                                </form>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm-9 col-md-6 col-lg-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">Rumah Diperiksa</h4>
-                                <form action="form-input-rt.php" class="mt-4" method="post">
+                        <div class="col-sm-9 col-md-6 col-lg-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">Rumah Diperiksa</h4>
                                     <div class="form-group">
-                                        <input type="number" class="form-control" name="jml_rmh_diperiksa">
+                                        <input type="number" class="form-control" required name="jml_rmh_diperiksa">
                                     </div>
-                                </form>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm-9 col-md-6 col-lg-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">Rumah Diperiksa Positif</h4>
-                                <form action="form-input-rt.php" class="mt-4" method="post">
+                        <div class="col-sm-9 col-md-6 col-lg-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">Rumah Diperiksa Positif</h4>
                                     <div class="form-group">
-                                        <input type="number" class="form-control" name="jml_rmh_ptf">
+                                        <input type="number" class="form-control" required name="jml_rmh_pstf">
                                     </div>
-                                </form>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm-9 col-md-6 col-lg-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">Jumlah Bak</h4>
-                                <form action="form-input-rt.php" class="mt-4" method="post">
+                        <div class="col-sm-9 col-md-6 col-lg-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">Jumlah Bak</h4>
                                     <div class="form-group">
-                                        <input type="number" class="form-control" name="jml_bak">
+                                        <input type="number" class="form-control" required name="jml_bak">
                                     </div>
-                                </form>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm-9 col-md-6 col-lg-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">Jumlah Bak Positif</h4>
-                                <form action="form-input-rt.php" class="mt-4" method="post">
+                        <div class="col-sm-9 col-md-6 col-lg-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">Jumlah Bak Positif</h4>
                                     <div class="form-group">
-                                        <input type="number" class="form-control" name="jml_bak_pstf">
+                                        <input type="number" class="form-control" required name="jml_bak_ptf">
                                     </div>
-                                </form>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm-9 col-md-6 col-lg-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">Jumlah Tandon</h4>
-                                <form action="form-input-rt.php" class="mt-4" method="post">
+                        <div class="col-sm-9 col-md-6 col-lg-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">Jumlah Tandon</h4>
                                     <div class="form-group">
-                                        <input type="number" class="form-control" name="jml_tandon">
+                                        <input type="number" class="form-control" required name="jml_tandon">
                                     </div>
-                                </form>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm-9 col-md-6 col-lg-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">Jumlah Tandon Positif</h4>
-                                <form action="form-input-rt.php" class="mt-4" method="post">
+                        <div class="col-sm-9 col-md-6 col-lg-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">Jumlah Tandon Positif</h4>    
                                     <div class="form-group">
-                                        <input type="number" class="form-control" name="jml_tandon_pstf">
+                                        <input type="number" class="form-control" required name="jml_tandon_pstf">
                                     </div>
-                                </form>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm-9 col-md-6 col-lg-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">Jumlah Tempayan</h4>
-                                <form action="form-input-rt.php" class="mt-4" method="post">
+                        <div class="col-sm-9 col-md-6 col-lg-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">Jumlah Tempayan</h4>
                                     <div class="form-group">
-                                        <input type="number" class="form-control" name="jml_tmpyn">
+                                        <input type="number" class="form-control" required name="jml_tmpyn">
                                     </div>
-                                </form>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm-9 col-md-6 col-lg-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">Jumlah Tempayan Positif</h4>
-                                <form action="form-input-rt.php" class="mt-4" method="post">
+                        <div class="col-sm-9 col-md-6 col-lg-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">Jumlah Tempayan Positif</h4>
                                     <div class="form-group">
-                                        <input type="number" class="form-control" name="jml_tmpyn_pstf">
+                                        <input type="number" class="form-control" required name="jml_tmpyn_pstf">
                                     </div>
-                                </form>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm-9 col-md-6 col-lg-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">Jumlah Botol</h4>
-                                <form action="form-input-rt.php" class="mt-4" method="post">
+                        <div class="col-sm-9 col-md-6 col-lg-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">Jumlah Botol</h4>
                                     <div class="form-group">
-                                        <input type="number" class="form-control" name="jml_btl">
+                                        <input type="number" class="form-control" required name="jml_btl">
                                     </div>
-                                </form>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm-9 col-md-6 col-lg-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">Jumlah Botol Positif</h4>
-                                <form action="form-input-rt.php" class="mt-4" method="post">
+                        <div class="col-sm-9 col-md-6 col-lg-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">Jumlah Botol Positif</h4>
                                     <div class="form-group">
-                                        <input type="number" class="form-control" name="jml_btl_pstf">
-                                    </div>
-                                </form>
+                                        <input type="number" class="form-control" required name="jml_btl_pstf">
+                                    </div>    
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm-9 col-md-6 col-lg-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">Barang Bekas</h4>
-                                <form action="form-input-rt.php" class="mt-4" method="post">
+                        <div class="col-sm-9 col-md-6 col-lg-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">Barang Bekas</h4>
                                     <div class="form-group">
-                                        <input type="number" class="form-control" name="jml_brg_bks">
+                                        <input type="number" class="form-control" required name="jml_brg_bks">
                                     </div>
-                                </form>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm-9 col-md-6 col-lg-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">Barang Bekas Positif</h4>
-                                <form action="form-input-rt.php" class="mt-4" method="post">
+                        <div class="col-sm-9 col-md-6 col-lg-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">Barang Bekas Positif</h4>
                                     <div class="form-group">
-                                        <input type="number" class="form-control" name="jml_brg_bks_pstf">
-                                    </div>
-                                </form>
+                                        <input type="number" class="form-control" required name="jml_brg_bks_pstf">
+                                    </div>    
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm-9 col-md-6 col-lg-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">Jumlah Kulkas</h4>
-                                <form action="form-input-rt.php" class="mt-4" method="post">
+                        <div class="col-sm-9 col-md-6 col-lg-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">Jumlah Kulkas</h4>
                                     <div class="form-group">
-                                        <input type="number" class="form-control" name="jml_kulkas">
+                                        <input type="number" class="form-control" required name="jml_kulkas">
                                     </div>
-                                </form>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm-9 col-md-6 col-lg-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">Jumlah Kulkas Positif</h4>
-                                <form action="form-input-rt.php" class="mt-4" method="post">
+                        <div class="col-sm-9 col-md-6 col-lg-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">Jumlah Kulkas Positif</h4>
                                     <div class="form-group">
-                                        <input type="number" class="form-control" name="jml_kulkas_pstf">
-                                    </div>
-                                </form>
+                                        <input type="number" class="form-control" required name="jml_kulkas_pstf">
+                                    </div>    
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm-9 col-md-6 col-lg-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">Jumlah Vas</h4>
-                                <form action="form-input-rt.php" class="mt-4" method="post">
+                        <div class="col-sm-9 col-md-6 col-lg-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">Jumlah Vas</h4>
                                     <div class="form-group">
-                                        <input type="number" class="form-control" name="jml_vas">
-                                    </div>
-                                </form>
+                                        <input type="number" class="form-control" required name="jml_vas">
+                                    </div>    
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm-9 col-md-6 col-lg-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">Jumlah Vas Positif</h4>
-                                <form action="form-input-rt.php" class="mt-4" method="post">
+                        <div class="col-sm-9 col-md-6 col-lg-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">Jumlah Vas Positif</h4>
                                     <div class="form-group">
-                                        <input type="number" class="form-control" name="jml_vas_pstf">
+                                        <input type="number" class="form-control" required name="jml_vas_pstf">
                                     </div>
-                                </form>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm-9 col-md-6 col-lg-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">Jumlah Pot</h4>
-                                <form action="form-input-rt.php" class="mt-4" method="post">
+                        <div class="col-sm-9 col-md-6 col-lg-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">Jumlah Pot</h4>
                                     <div class="form-group">
-                                        <input type="number" class="form-control" name="jml_pot">
+                                        <input type="number" class="form-control" required name="jml_pot">
                                     </div>
-                                </form>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm-9 col-md-6 col-lg-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">Jumlah Pot Positif</h4>
-                                <form action="form-input-rt.php" class="mt-4" method="post">
+                        <div class="col-sm-9 col-md-6 col-lg-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">Jumlah Pot Positif</h4>
                                     <div class="form-group">
-                                        <input type="number" class="form-control" name="jml_pot_pstf">
+                                        <input type="number" class="form-control" required name="jml_pot_pstf">
                                     </div>
-                                </form>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm-9 col-md-6 col-lg-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">Jumlah Dispenser</h4>
-                                <form action="form-input-rt.php" class="mt-4" method="post">
+                        <div class="col-sm-9 col-md-6 col-lg-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">Jumlah Dispenser</h4>
                                     <div class="form-group">
-                                        <input type="number" class="form-control" name="jml_dispen">
+                                        <input type="number" class="form-control" required name="jml_dispen">
                                     </div>
-                                </form>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm-9 col-md-6 col-lg-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">Jumlah Dispenser Positif</h4>
-                                <form action="form-input-rt.php" class="mt-4" method="post">
+                        <div class="col-sm-9 col-md-6 col-lg-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">Jumlah Dispenser Positif</h4>
                                     <div class="form-group">
-                                        <input type="number" class="form-control" name="jml_dispen_pstf">
+                                        <input type="number" class="form-control" required name="jml_dispen_pstf">
                                     </div>
-                                </form>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm-9 col-md-6 col-lg-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">Lain-lain</h4>
-                                <form action="form-input-rt.php" class="mt-4" method="post">
+                        <div class="col-sm-9 col-md-6 col-lg-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">Lain-lain</h4>
                                     <div class="form-group">
-                                        <input type="number" class="form-control" name="jml_lain">
+                                        <input type="number" class="form-control" required name="jml_lain">
                                     </div>
-                                </form>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm-9 col-md-6 col-lg-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">Lain-lain Positif</h4>
-                                <form action="form-input-rt.php" class="mt-4" method="post">
+                        <div class="col-sm-9 col-md-6 col-lg-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">Lain-lain Positif</h4>
                                     <div class="form-group">
-                                        <input type="number" class="form-control" name="jml_lain_pstf" >
+                                        <input type="number" class="form-control" required name="jml_lain_pstf" >
                                     </div>
-                                </form>
+                                </div>
                             </div>
                         </div>
+                        <div class="col-sm-36 col-md-6 col-lg-12">
+                            <button type="submit" class="btn btn-primary btn-lg btn-block" name="simpan">Simpan</button>
+                        </div>
                     </div>
-                    <div class="col-sm-36 col-md-6 col-lg-12">
-                        <form action="form-input-rt.php" class="mt-4" method="post">
-                            <button type="submit" class="btn btn-primary btn-lg btn-block" name="tambah">Simpan</button>
-                        </form>
-                    </div>
-                </div>
+                </form>
                 <!-- ============================================================== -->
                 <!-- End PAge Content -->
                 <!-- ============================================================== -->
@@ -668,84 +640,3 @@
 </body>
 
 </html>
-
-<?php
-
-    $sukses="";
-    $eror="";
-
-    include "config.php";
-
-    if(isset($_POST['tambah'])){
-        $tanggal = $_POST['tanggal'];
-        $no_rt = $_POST['no_rt'];
-        $jml_rmh_diperiksa = $_POST['jml_rmh_diperiksa'];
-        $jml_rmh_pstf =$_POST['jml_rmh_pstf'];
-        $jml_bak = $_POST['jml_bak'];
-        $jml_bak_ptf = $_POST['jml_bak_ptf'];
-        $jml_tandon = $_POST['jml_tandon'];
-        $jml_tandon_pstf = $_POST['jml_tandon_pstf'];
-        $jml_tmpyn = $_POST['jml_tmpyn'];
-        $jml_tmpyn_pstf = $_POST['jml_tmpyn_pstf'];
-        $jml_btl = $_POST['jml_btl'];
-        $jml_btl_pstf = $_POST['jml_btl_pstf'];
-        $jml_brg_bks = $_POST['jml_brg_bks'];
-        $jml_brg_bks_pstf = $_POST['jml_brg_bks_pstf'];
-        $jml_kulkas =$_POST['jml_kulkas'];
-        $jml_kulkas_pstf = $_POST['jml_kulkas_pstf'];
-        $jml_vas = $_POST['jml_vas'];
-        $jml_vas_pstf = $_POST['jml_vas_pstf'];
-        $jml_pot = $_POST['jml_pot'];
-        $jml_pot_pstf = $_POST['jml_pot_pstf'];
-        $jml_lain = $_POST['jml_lain'];
-        $jml_lain_pstf = $_POST['jml_lain_pstf'];
-        $jml_dispen = $_POST['jml_dispen'];
-        $jml_dispen_pstf = $_POST['jml_dispen_pstf'];
-
-        if($tanggal &&$no_rt&&$jml_rmh_diperiksa&& $jml_rmh_pstf&&$jml_bak&&$jml_bak_ptf&&$jml_tandon &&$jml_tandon_pstf
-            &&$jml_tmpyn&&$jml_tmpyn_pstf&&$jml_btl&&$jml_btl_pstf&&$jml_brg_bks&&$jml_brg_bks_pstf&&$jml_kulkas&&$jml_kulkas_pstf&&
-            $jml_vas&&$jml_vas_pstf&&$jml_pot&&$jml_pot_pstf&&$jml_lain&&$jml_lain_pstf&&$jml_dispen&&$jml_dispen_pstf){
-
-        $query = "INSERT INTO data_rt VALUES ('', '$tanggal', '$no_rt', '$jml_rmh_diperiksa', '$jml_rmh_pstf', '$jml_bak', '$jml_bak_ptf', '$jml_tandon', 
-        '$jml_tandon_pstf', '$jml_tmpyn', '$jml_tmpyn_pstf', '$jml_btl', '$jml_btl_pstf', '$jml_brg_bks', '$jml_brg_bks_pstf', '$jml_kulkas', '$jml_kulkas_pstf', 
-        '$jml_vas', '$jml_vas_pstf', '$jml_pot', '$jml_pot_pstf', '$jml_lain', '$jml_lain_pstf', '$jml_dispen')";
-        $simpan = mysqli_query($con,$query);
-
-        if($simpan){
-            $sukses ="data berhasil disimpan";
-            $tanggal   = "";
-            $no_rt  = "";
-            $jml_rmh_diperiksa  = "";
-            $jml_rmh_pstf  = "";
-            $jml_bak  = "";
-            $jml_bak_ptf  = "";
-            $jml_tandon   = "";
-            $jml_tandon_pstf  = "";
-            $jml_tmpyn  = "";
-            $jml_tmpyn_pstf  = "";
-            $jml_btl  = "";
-            $jml_btl_pstf  = "";
-            $jml_brg_bks  = "";
-            $jml_brg_bks_pstf  = "";
-            $jml_kulkas  = "";
-            $jml_kulkas_pstf  = "";
-            $jml_vas  = "";
-            $jml_vas_pstf  = "";
-            $jml_pot  = "";
-            $jml_pot_pstf   = "";
-            $jml_lain  = "";
-            $jml_lain_pstf  = "";
-            $jml_dispen  = "";
-            $jml_dispen_pstf  = "";
-
-        }else{
-            $eror="data gagal di simpan";
-        }
-
-    }
-            
-
-            
-    }
-
-?>
