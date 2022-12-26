@@ -247,7 +247,7 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
-                                    <a href="https://datatables.net/">Datatables</a></h6>
+                                    <a href="https://datatables.net/">Data tables</a>
                                 <div class="table-responsive">
                                     <table id="zero_config" class="table table-striped table-bordered no-wrap">
                                         <thead>
@@ -317,9 +317,15 @@
                                                 
                                             </tr>
                                             <?php endwhile; ?>
-                                         
-                                           
+
                                         </tbody>
+                                        
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <!-- ============================================================== -->
                 <!-- End PAge Content -->
                 <!-- ============================================================== -->

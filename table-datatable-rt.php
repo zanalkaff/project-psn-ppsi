@@ -247,10 +247,6 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Zero Configuration</h4>
-                                <h6 class="card-subtitle">DataTables has most features enabled by default, so all you
-                                    need to do to use it with your own tables is to call the construction
-                                    function:<code> $().DataTable();</code>. You can refer full documentation from here
                                     <a href="https://datatables.net/">Datatables</a></h6>
                                 <div class="table-responsive">
                                     <table id="zero_config" class="table table-striped table-bordered no-wrap">
@@ -318,6 +314,10 @@
                                                 <td><?=$data["jml_lain_pstf"]?></td>
                                                 <td><?=$data["jml_dispen"]?></td>
                                                 <td><?=$data["jml_dispen_pstf"]?></td>
+                                                <td width "158" class="text-center">
+                                                    <a href="ubah-data.php?id=<?=$data['id'];?>" name ="ubah" class= "btn btn-success">Ubah</a>
+                                                    <a href="hapus-data.php?id=<?=$data['id'];?>" name ="hapus"class= "btn btn-danger">Hapus</a>
+                                                </td>
 
                                                 
                                             </tr>

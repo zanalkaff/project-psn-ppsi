@@ -10,8 +10,8 @@ if(isset($_SESSION['name'])){
         $name = $_POST["name"];
         $email =  $_POST["email"];
         $password = $_POST["password"];
-        $cpassword = $_POST["cpassword"];   
-        if($password == $cpassword){
+        
+        if($password){
 
             $sql="SELECT *FROM admin_form where email='$email'";
             $result =mysqli_query($con,$sql);
@@ -24,7 +24,7 @@ if(isset($_SESSION['name'])){
                     $name ="";
                     $email ="";
                     $_POST['password']="";
-                    $_POST['cpassword']="";
+                    
 
                 }  else{
                     echo "<script> alert('user regis failed')</script>";
@@ -99,11 +99,7 @@ if(isset($_SESSION['name'])){
                                     <div class="form-group">
                                         <input class="form-control" type="password" placeholder="password" name="password">
                                     </div>
-                                <div class="col-lg-12">
-                                    <div class="form-group">
-                                        <input class="form-control" type="cpassword" placeholder="password" name="password">
-                                    </div>
-                                </div>
+                               
                                 <div class="col-lg-12 text-center">
                                     <button type="submit" class="btn btn-block btn-primary" name="submit">Daftar</button>
                                 </div>
