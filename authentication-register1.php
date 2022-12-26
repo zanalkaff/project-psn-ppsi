@@ -50,8 +50,8 @@ if(isset($_SESSION['name'])){
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
-    <title>soengsouy.com</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/Logo1.png">
+    <title>M-PSN.com</title>
     <!-- Custom CSS -->
     <link href="dist/css/style.min.css" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -76,14 +76,13 @@ if(isset($_SESSION['name'])){
         <!-- Login box.scss -->
         <!-- ============================================================== -->
         <div class="auth-wrapper d-flex no-block justify-content-center align-items-center position-relative"
-            style="background:url(assets/images/big/auth-bg.jpg) no-repeat center center;">
+            style="background-color :aqua">
             <div class="auth-box row text-center">
-                <div class="col-lg-7 col-md-5 modal-bg-img" style="background-image: url(assets/images/big/3.jpg);">
+                <div class="col-lg-7 col-md-5 modal-bg-img" style="background-image: url(assets/images/big/logoback2.png);">
                 </div>
                 <div class="col-lg-5 col-md-7 bg-white">
                     <div class="p-3">
-                        <img src="assets/images/big/icon.png" alt="wrapkit">
-                        <h2 class="mt-3 text-center">Sign Up</h2>
+                        <h2 class="mt-3 text-center">Daftar</h2>
                         <form class="mt-4" method="post">
                             <div class="row">
                                 <div class="col-lg-12">
@@ -102,14 +101,14 @@ if(isset($_SESSION['name'])){
                                     </div>
                                 <div class="col-lg-12">
                                     <div class="form-group">
-                                        <input class="form-control" type="cpassword" placeholder="password" name="cpassword">
+                                        <input class="form-control" type="cpassword" placeholder="password" name="password">
                                     </div>
                                 </div>
                                 <div class="col-lg-12 text-center">
-                                    <button type="submit" class="btn btn-block btn-dark" name="submit">Sign Up</button>
+                                    <button type="submit" class="btn btn-block btn-primary" name="submit">Daftar</button>
                                 </div>
                                 <div class="col-lg-12 text-center mt-5">
-                                    Already have an account? <a href="index.php" class="text-danger">Sign In</a>
+                                    Sudah Memiliki Akun? <a href="index.php" class="text-danger">Masuk</a>
                                 </div>
                             </div>
                         </form>

@@ -9,8 +9,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
-    <title>e-PSN</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/Logo1.png">
+    <title>M-PSN.com</title>
     <!-- Custom CSS -->
     <link href="assets/extra-libs/c3/c3.min.css" rel="stylesheet">
     <link href="assets/libs/chartist/dist/chartist.min.css" rel="stylesheet">
@@ -53,18 +53,12 @@
                         <a href="dasboard.php">
                             <b class="logo-icon">
                                 <!-- Dark Logo icon -->
-                                <img src="assets/images/logo-icon.png" alt="homepage" class="dark-logo" />
+                                <img src="assets/images/psnlogo.png" alt="homepage" class="dark-logo" />
                                 <!-- Light Logo icon -->
                                 <img src="assets/images/logo-icon.png" alt="homepage" class="light-logo" />
                             </b>
                             <!--End Logo icon -->
                             <!-- Logo text -->
-                            <span class="logo-text">
-                                <!-- dark Logo text -->
-                                <img src="assets/images/logo-text.png" alt="homepage" class="dark-logo" />
-                                <!-- Light Logo text -->
-                                <img src="assets/images/logo-light-text.png" class="light-logo" alt="homepage" />
-                            </span>
                         </a>
                     </div>
                     <!-- ============================================================== -->
@@ -96,7 +90,7 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="javascript:void(0)" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
-                                <img src="assets/images/users/profile-pic.jpg" alt="user" class="rounded-circle"
+                                <img src="assets/images/users/psnlogo.png" alt="user" class="rounded-circle"
                                     width="40">
                             </a>
                             <div class="dropdown-menu dropdown-menu-right user-dd animated flipInY">
@@ -134,10 +128,10 @@
                     <ul id="sidebarnav">
                         <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="dasboard.php"
                                 aria-expanded="false"><i data-feather="home" class="feather-icon"></i><span
-                                    class="hide-menu">Home Dashboard</span></a></li>
+                                    class="hide-menu">Dashboard</span></a></li>
                         <li class="list-divider"></li>
 
-                        <li class="nav-small-cap"><span class="hide-menu">Components</span></li>
+                        <li class="nav-small-cap"><span class="hide-menu">Pendataan</span></li>
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
                                 aria-expanded="false"><i data-feather="file-plus" class="feather-icon"></i><span
                                     class="hide-menu">Input Data PSN </span></a>
@@ -176,7 +170,7 @@
                         </li>
                         
                         <li class="list-divider"></li>
-                        <li class="nav-small-cap"><span class="hide-menu">Authentication</span></li>
+                        <li class="nav-small-cap"><span class="hide-menu">Pengelolaan Data</span></li>
 
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
                                 aria-expanded="false"><i data-feather="printer" class="feather-icon"></i><span
@@ -208,17 +202,6 @@
                                             class="hide-menu"> Data Dawis </span></a></li>
                             </ul>
                         </li>
-                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="authentication-login1.php"
-                                aria-expanded="false"><i data-feather="lock" class="feather-icon"></i><span
-                                    class="hide-menu">Login
-                                </span></a>
-                        </li>
-                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link"
-                                href="authentication-register1.php" aria-expanded="false"><i data-feather="lock"
-                                    class="feather-icon"></i><span class="hide-menu">Register
-                                </span></a>
-                        </li>
-
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
                                 aria-expanded="false"><i data-feather="feather" class="feather-icon"></i><span
                                     class="hide-menu">Icons
@@ -255,7 +238,7 @@
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-7 align-self-center">
-                        <h3 class="page-title text-truncate text-dark font-weight-medium mb-1">Hello, Admin 1</h3>
+                        <h3 class="page-title text-truncate text-dark font-weight-medium mb-1">Hello Sobat Sehat</h3>
                         <div class="d-flex align-items-center">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb m-0 p-0">

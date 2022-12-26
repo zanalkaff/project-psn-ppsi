@@ -40,7 +40,7 @@ if (isset($_POST['submit'])) {
     <meta name="author" content="">
     <!-- Favicon icon -->
     <!-- <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png"> -->
-    <title>psn.com</title>
+    <title>M-PSN.com</title>
     <!-- Custom CSS -->
     <link href="dist/css/style.min.css" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -65,16 +65,15 @@ if (isset($_POST['submit'])) {
         <!-- Login box.scss -->
         <!-- ============================================================== -->
         <div class="auth-wrapper d-flex no-block justify-content-center align-items-center position-relative"
-            style="background:url(assets/images/big/auth-bg.jpg) no-repeat center center;">
+            style="background-color :aqua">
             <div class="auth-box row">
-                <div class="col-lg-7 col-md-5 modal-bg-img" style="background-image: url(assets/images/big/3.jpg);">
+                <div class="col-lg-7 col-md-5 modal-bg-img" style="background-image: url(assets/images/big/logoback2.png);">
                 </div>
                 <div class="col-lg-5 col-md-7 bg-white">
                     <div class="p-3">
                         <div class="text-center">
-                            <img src="assets/images/big/icon.png" alt="wrapkit">
                         </div>
-                        <h2 class="mt-3 text-center">Sign In</h2>
+                        <h2 class="mt-3 text-center">Masuk</h2>
                         <p class="text-center">Mobile PSN Desa Kebumen</p>
                         <form class="mt-4" method="post" action = "">
                             <div class="row">
@@ -93,10 +92,10 @@ if (isset($_POST['submit'])) {
                                     </div>
                                 </div>
                                 <div class="col-lg-12 text-center">
-                                    <button type="submit" class="btn btn-block btn-dark" name="submit">Sign In</button>
+                                    <button type="submit" class="btn btn-block btn-primary" name="submit">Masuk</button>
                                 </div>
                                 <div class="col-lg-12 text-center mt-5">
-                                    Don't have an account? <a href="authentication-register1.php" class="text-danger">Sign Up</a>
+                                    Belum Memiliki Akun? <a href="authentication-register1.php" class="text-danger">Daftar</a>
                                 </div>
                             </div>
                         </form>
