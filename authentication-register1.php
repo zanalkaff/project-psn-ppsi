@@ -1,42 +1,38 @@
 <?php
-include "config.php";
 
-session_start();
-if(isset($_SESSION['name'])){
-    header("location:dasboard.php");
-}
+    include "config/app.php";
+
+    session_start();
+    if(isset($_SESSION['nama'])){
+        header("location:dasboard.php");
+    }
 
     if (isset($_POST["submit"])){
-        $name = $_POST["name"];
+        $nama = $_POST["nama"];
         $email =  $_POST["email"];
         $password = $_POST["password"];
         
         if($password){
-
             $sql="SELECT *FROM admin_form where email='$email'";
-            $result =mysqli_query($con,$sql);
+            $result =mysqli_query($conn,$sql);
             if(!$result-> num_rows >0){
-              $sql = "INSERT INTO admin_form (name,email,password)
-                        values ('$name','$email','$password')";
-                $result = mysqli_query($con,$sql);
+            $sql = "INSERT INTO admin_form (nama,email,password)
+                        values ('$nama','$email','$password')";
+                $result = mysqli_query($conn,$sql);
                 if($result){
                     echo "<script> alert('user regis complete')</script>";
-                    $name ="";
+                    $nama ="";
                     $email ="";
                     $_POST['password']="";
-                    
-
                 }  else{
                     echo "<script> alert('user regis failed')</script>";
-
                 }
             }else{
-                echo "<script> alert('email alredy')</script>";
+                echo "<script> alert('email already')</script>";
             }
-      
-
         }
     }
+
 ?>
 
 <!DOCTYPE html>
@@ -76,7 +72,7 @@ if(isset($_SESSION['name'])){
         <!-- Login box.scss -->
         <!-- ============================================================== -->
         <div class="auth-wrapper d-flex no-block justify-content-center align-items-center position-relative"
-            style="background-color :aqua">
+            style="background-image: url(assets/images/background/kebumen.jpg); background-size: cover;">
             <div class="auth-box row text-center">
                 <div class="col-lg-7 col-md-5 modal-bg-img" style="background-image: url(assets/images/big/logoback2.png);">
                 </div>
@@ -87,7 +83,7 @@ if(isset($_SESSION['name'])){
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="form-group">
-                                        <input class="form-control" type="text" placeholder="masukkan nama" name="name">
+                                        <input class="form-control" type="text" placeholder="masukkan nama" name="nama">
                                     </div>
                                 </div>
                                 <div class="col-lg-12">

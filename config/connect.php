@@ -7,8 +7,8 @@
     $database ="db_psnkebumen";
 
     $conn = mysqli_connect($server,$user,$pass,$database);
-    // if(!$con){
-    //     die("<script>alert('Connection failed..')</script>");
-    // }    
+    if(!$conn){
+        die("<script>alert('Connection failed..')</script>");
+    }    
 
 ?>

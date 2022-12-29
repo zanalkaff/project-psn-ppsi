@@ -75,43 +75,6 @@
                 <!-- ============================================================== -->
                 <!-- End Logo -->
                 <!-- ============================================================== -->
-                <div class="navbar-collapse collapse" id="navbarSupportedContent">
-                    <!-- ============================================================== -->
-                    <!-- toggle and nav items -->
-                    <!-- ============================================================== -->
-                    <ul class="navbar-nav float-left mr-auto ml-3 pl-1"></ul>
-                    <!-- ============================================================== -->
-                    <!-- Right side toggle and nav items -->
-                    <!-- ============================================================== -->
-                    <ul class="navbar-nav float-right">
-                        <!-- ============================================================== -->
-                        <!-- User profile and search -->
-                        <!-- ============================================================== -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="javascript:void(0)" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
-                                <img src="assets/images/users/psnlogo.png" alt="user" class="rounded-circle"
-                                    width="40">
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right user-dd animated flipInY">
-                                <a class="dropdown-item" href="javascript:void(0)"><i data-feather="user"
-                                        class="svg-icon mr-2 ml-1"></i>
-                                    My Profile</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="javascript:void(0)"><i data-feather="settings"
-                                        class="svg-icon mr-2 ml-1"></i>
-                                    Account Setting</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="index.php"><i data-feather="power"
-                                        class="svg-icon mr-2 ml-1"></i>
-                                    Logout</a>
-                            </div>
-                        </li>
-                        <!-- ============================================================== -->
-                        <!-- User profile and search -->
-                        <!-- ============================================================== -->
-                    </ul>
-                </div>
             </nav>
         </header>
         <!-- ============================================================== -->
@@ -136,16 +99,12 @@
                                 aria-expanded="false"><i data-feather="file-plus" class="feather-icon"></i><span
                                     class="hide-menu">Input Data PSN </span></a>
                             <ul aria-expanded="false" class="collapse  first-level base-level-line">
-                                <li class="sidebar-item"><a href="form-input-rt.php" class="sidebar-link"><span
-                                            class="hide-menu"> Input Data RT
+                                <li class="sidebar-item"><a href="form-input-1.php" class="sidebar-link"><span
+                                            class="hide-menu"> Input Form 1
                                         </span></a>
                                 </li>
-                                <li class="sidebar-item"><a href="form-input-rw.php" class="sidebar-link"><span
-                                            class="hide-menu"> Input Data RW
-                                        </span></a>
-                                </li>
-                                <li class="sidebar-item"><a href="form-input-dawis.php" class="sidebar-link"><span
-                                            class="hide-menu"> Input Data Dawis
+                                <li class="sidebar-item"><a href="form-input-2.php" class="sidebar-link"><span
+                                            class="hide-menu"> Input Form 2
                                         </span></a>
                                 </li>
                             </ul>
@@ -154,16 +113,12 @@
                             aria-expanded="false"><i data-feather="file-text" class="feather-icon"></i><span
                                 class="hide-menu">Data PSN </span></a>
                             <ul aria-expanded="false" class="collapse  first-level base-level-line">
-                                <li class="sidebar-item"><a href="table-datatable-rt.php" class="sidebar-link"><span
-                                            class="hide-menu"> Data RT
+                                <li class="sidebar-item"><a href="table-datatable-1.php" class="sidebar-link"><span
+                                            class="hide-menu"> Data Form 1
                                         </span></a>
                                 </li>
-                                <li class="sidebar-item"><a href="table-datatable-rw.php" class="sidebar-link"><span
-                                            class="hide-menu"> Data RW
-                                        </span></a>
-                                </li>
-                                <li class="sidebar-item"><a href="table-datatable-dawis.php" class="sidebar-link"><span
-                                            class="hide-menu"> Data Dawis
+                                <li class="sidebar-item"><a href="table-datatable-2.php" class="sidebar-link"><span
+                                            class="hide-menu"> Data Form 2
                                         </span></a>
                                 </li>
                             </ul>
@@ -177,29 +132,11 @@
                                     class="hide-menu">Cetak Data
                                 </span></a>
                             <ul aria-expanded="false" class="collapse first-level base-level-line">
-                                <li class="sidebar-item"><a href="print-data-rt.php" class="sidebar-link"><span
-                                            class="hide-menu"> Data RT </span></a></li>
+                                <li class="sidebar-item"><a href="print-data-1.php" class="sidebar-link"><span
+                                            class="hide-menu"> Cetak Form 1 </span></a></li>
 
-                                <li class="sidebar-item"><a href="print-data-rw.php" class="sidebar-link"><span
-                                            class="hide-menu"> Data RW </span></a></li>
-                                
-                                <li class="sidebar-item"><a href="print-data-dawis.php" class="sidebar-link"><span
-                                            class="hide-menu"> Data Dawis </span></a></li>
-                            </ul>
-                        </li>
-                        <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
-                                aria-expanded="false"><i data-feather="send" class="feather-icon"></i><span
-                                    class="hide-menu">Kirim Data
-                                </span></a>
-                            <ul aria-expanded="false" class="collapse first-level base-level-line">
-                                <li class="sidebar-item"><a href="send-data-rt.php" class="sidebar-link"><span
-                                            class="hide-menu"> Data RT </span></a></li>
-
-                                <li class="sidebar-item"><a href="send-data-rw.php" class="sidebar-link"><span
-                                            class="hide-menu"> Data RW </span></a></li>
-                                
-                                <li class="sidebar-item"><a href="send-data-dawis.php" class="sidebar-link"><span
-                                            class="hide-menu"> Data Dawis </span></a></li>
+                                <li class="sidebar-item"><a href="print-data-2.php" class="sidebar-link"><span
+                                            class="hide-menu"> Cetak Form 2 </span></a></li>
                             </ul>
                         </li>
 
@@ -246,7 +183,7 @@
             <!-- ============================================================== -->
             <div class="container-fluid">
                 <!-- *************************************************************** -->
-                <!-- Start First Cards -->
+                <!-- Start Cards -->
                 <!-- *************************************************************** -->
                 <div class="card-group">
                     <div class="card border-right">
@@ -254,25 +191,11 @@
                             <div class="d-flex d-lg-flex d-md-block align-items-center">
                                 <div>
                                     <div class="d-inline-flex align-items-center">
-                                        <h2 class="text-dark mb-1 font-weight-medium">Data RT</h2>
+                                        <h2 class="text-dark mb-1 font-weight-medium">Input Form 1</h2>
                                     </div>
-                                    <h6 class="text-muted font-weight-normal mb-0 w-100 text-truncate">0 Data</h6>
                                 </div>
                                 <div class="ml-auto mt-md-3 mt-lg-0">
-                                    <a class="btn btn-link btn-lg" href="form-input-rt.php" role="button"><i class="fas fa-arrow-circle-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card border-right">
-                        <div class="card-body">
-                            <div class="d-flex d-lg-flex d-md-block align-items-center">
-                                <div>
-                                    <h2 class="text-dark mb-1 w-100 text-truncate font-weight-medium">Data RW</h2>
-                                    <h6 class="text-muted font-weight-normal mb-0 w-100 text-truncate">0 Data</h6>
-                                </div>
-                                <div class="ml-auto mt-md-3 mt-lg-0">
-                                    <a class="btn btn-link btn-lg" href="form-input-rw.php" role="button"><i class="fas fa-arrow-circle-right"></i></a>
+                                    <a class="btn btn-link btn-lg" href="form-input-1.php" role="button"><i class="fas fa-arrow-circle-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -282,19 +205,78 @@
                             <div class="d-flex d-lg-flex d-md-block align-items-center">
                                 <div>
                                     <div class="d-inline-flex align-items-center">
-                                        <h2 class="text-dark mb-1 font-weight-medium">Data Dawis</h2>
+                                        <h2 class="text-dark mb-1 font-weight-medium">Input Form 2</h2>
                                     </div>
-                                    <h6 class="text-muted font-weight-normal mb-0 w-100 text-truncate">0 Data</h6>
                                 </div>
                                 <div class="ml-auto mt-md-3 mt-lg-0">
-                                    <a class="btn btn-link btn-lg" href="form-input-dawis.php" role="button"><i class="fas fa-arrow-circle-right"></i></a>
+                                    <a class="btn btn-link btn-lg" href="form-input-2.php" role="button"><i class="fas fa-arrow-circle-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-group">
+                    <div class="card border-right">
+                        <div class="card-body">
+                            <div class="d-flex d-lg-flex d-md-block align-items-center">
+                                <div>
+                                    <div class="d-inline-flex align-items-center">
+                                        <h2 class="text-dark mb-1 font-weight-medium">Data Form 1</h2>
+                                    </div>
+                                </div>
+                                <div class="ml-auto mt-md-3 mt-lg-0">
+                                    <a class="btn btn-link btn-lg" href="table-datatable-1.php" role="button"><i class="fas fa-arrow-circle-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card border-right">
+                        <div class="card-body">
+                            <div class="d-flex d-lg-flex d-md-block align-items-center">
+                                <div>
+                                    <div class="d-inline-flex align-items-center">
+                                        <h2 class="text-dark mb-1 font-weight-medium">Data Form 2</h2>
+                                    </div>
+                                </div>
+                                <div class="ml-auto mt-md-3 mt-lg-0">
+                                    <a class="btn btn-link btn-lg" href="table-datatable-2.php" role="button"><i class="fas fa-arrow-circle-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-group">
+                    <div class="card border-right">
+                        <div class="card-body">
+                            <div class="d-flex d-lg-flex d-md-block align-items-center">
+                                <div>
+                                    <div class="d-inline-flex align-items-center">
+                                        <h2 class="text-dark mb-1 font-weight-medium">Cetak Form 1</h2>
+                                    </div>
+                                </div>
+                                <div class="ml-auto mt-md-3 mt-lg-0">
+                                    <a class="btn btn-link btn-lg" href="print-data-1.php" role="button"><i class="fas fa-arrow-circle-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card border-right">
+                        <div class="card-body">
+                            <div class="d-flex d-lg-flex d-md-block align-items-center">
+                                <div>
+                                    <div class="d-inline-flex align-items-center">
+                                        <h2 class="text-dark mb-1 font-weight-medium">Cetak Form 2</h2>
+                                    </div>
+                                </div>
+                                <div class="ml-auto mt-md-3 mt-lg-0">
+                                    <a class="btn btn-link btn-lg" href="print-data-2.php" role="button"><i class="fas fa-arrow-circle-right"></i></a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- *************************************************************** -->
-                <!-- End First Cards -->
+                <!-- End Cards -->
                 <!-- *************************************************************** -->
             </div>
             <!-- ============================================================== -->

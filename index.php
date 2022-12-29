@@ -1,28 +1,28 @@
 <?php
 
-include 'config.php';
+    include 'config/app.php';
 
-session_start();
+    session_start();
 
-error_reporting(0);
+    error_reporting(0);
 
-if (isset($_SESSION['email'])) {
-    header("Location: dasboard.php");
-}
+    if (isset($_SESSION['email'])) {
+        header("Location: dasboard.php");
+    }
 
-if (isset($_POST['submit'])) {
-	$email = $_POST['email'];
-	$password = ($_POST['password']);
+    if (isset($_POST['submit'])) {
+        $email = $_POST['email'];
+        $password = ($_POST['password']);
 
-	$sql = "SELECT * FROM admin_form WHERE email='$email' AND password='$password'";
-	$result = mysqli_query($con, $sql);
-	if ($result->num_rows > 0) {
-		$row = mysqli_fetch_assoc($result);
-		header("Location: dasboard.php");
-	} else {
-		echo "<script>alert('Woops! Email Atau Password anda Salah.')</script>";
-	}
-}
+        $sql = "SELECT * FROM admin_form WHERE email='$email' AND password='$password'";
+        $result = mysqli_query($conn, $sql);
+        if ($result->num_rows > 0) {
+            $row = mysqli_fetch_assoc($result);
+            header("Location: dasboard.php");
+        } else {
+            echo "<script>alert('Woops! Email Atau Password anda Salah.')</script>";
+        }
+    }
 
 ?>
 
@@ -65,7 +65,7 @@ if (isset($_POST['submit'])) {
         <!-- Login box.scss -->
         <!-- ============================================================== -->
         <div class="auth-wrapper d-flex no-block justify-content-center align-items-center position-relative"
-            style="background-color :aqua">
+            style="background-image: url(assets/images/background/kebumen.jpg); background-size: cover;">
             <div class="auth-box row">
                 <div class="col-lg-7 col-md-5 modal-bg-img" style="background-image: url(assets/images/big/logoback2.png);">
                 </div>

@@ -1,4 +1,8 @@
+<?php
 
+    include 'config/app.php';
+
+?>
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
 
@@ -15,12 +19,6 @@
     <!-- Custom CSS -->
     <link href="dist/css/style.min.css" rel="stylesheet">
     <!-- php5 Shim and Respond.js IE8 support of php5 elements and media queries -->
-    <!-- yt -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.6.5/css/buttons.dataTables.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
-    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
-    <!-- end ty -->
    
 </head>
 
@@ -52,7 +50,7 @@
                     <!-- ============================================================== -->
                     <div class="navbar-brand">
                         <!-- Logo icon -->
-                        <a href="index.php">
+                        <a href="dasboard.php">
                             <b class="logo-icon">
                                 <!-- Dark Logo icon -->
                                 <img src="assets/images/psnlogo.png" alt="homepage" class="dark-logo" />
@@ -77,43 +75,6 @@
                 <!-- ============================================================== -->
                 <!-- End Logo -->
                 <!-- ============================================================== -->
-                <div class="navbar-collapse collapse" id="navbarSupportedContent">
-                    <!-- ============================================================== -->
-                    <!-- toggle and nav items -->
-                    <!-- ============================================================== -->
-                    <ul class="navbar-nav float-left mr-auto ml-3 pl-1"></ul>
-                    <!-- ============================================================== -->
-                    <!-- Right side toggle and nav items -->
-                    <!-- ============================================================== -->
-                    <ul class="navbar-nav float-right">
-                        <!-- ============================================================== -->
-                        <!-- User profile and search -->
-                        <!-- ============================================================== -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="javascript:void(0)" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
-                                <img src="assets/images/users/psnlogo.png" alt="user" class="rounded-circle"
-                                    width="40">
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right user-dd animated flipInY">
-                                <a class="dropdown-item" href="javascript:void(0)"><i data-feather="user"
-                                        class="svg-icon mr-2 ml-1"></i>
-                                    My Profile</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="javascript:void(0)"><i data-feather="settings"
-                                        class="svg-icon mr-2 ml-1"></i>
-                                    Account Setting</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="javascript:void(0)"><i data-feather="power"
-                                        class="svg-icon mr-2 ml-1"></i>
-                                    Logout</a>
-                            </div>
-                        </li>
-                        <!-- ============================================================== -->
-                        <!-- User profile and search -->
-                        <!-- ============================================================== -->
-                    </ul>
-                </div>
             </nav>
         </header>
         <!-- ============================================================== -->
@@ -138,16 +99,12 @@
                                 aria-expanded="false"><i data-feather="file-plus" class="feather-icon"></i><span
                                     class="hide-menu">Input Data PSN </span></a>
                             <ul aria-expanded="false" class="collapse  first-level base-level-line">
-                                <li class="sidebar-item"><a href="form-input-rt.php" class="sidebar-link"><span
-                                            class="hide-menu"> Input Data RT
+                                <li class="sidebar-item"><a href="form-input-1.php" class="sidebar-link"><span
+                                            class="hide-menu"> Input Form 1
                                         </span></a>
                                 </li>
-                                <li class="sidebar-item"><a href="form-input-rw.php" class="sidebar-link"><span
-                                            class="hide-menu"> Input Data RW
-                                        </span></a>
-                                </li>
-                                <li class="sidebar-item"><a href="form-input-dawis.php" class="sidebar-link"><span
-                                            class="hide-menu"> Input Data Dawis
+                                <li class="sidebar-item"><a href="form-input-2.php" class="sidebar-link"><span
+                                            class="hide-menu"> Input Form 2
                                         </span></a>
                                 </li>
                             </ul>
@@ -156,53 +113,33 @@
                             aria-expanded="false"><i data-feather="file-text" class="feather-icon"></i><span
                                 class="hide-menu">Data PSN </span></a>
                             <ul aria-expanded="false" class="collapse  first-level base-level-line">
-                                <li class="sidebar-item"><a href="table-datatable-rt.php" class="sidebar-link"><span
-                                            class="hide-menu"> Data RT
+                                <li class="sidebar-item"><a href="table-datatable-1.php" class="sidebar-link"><span
+                                            class="hide-menu"> Data Form 1
                                         </span></a>
                                 </li>
-                                <li class="sidebar-item"><a href="table-datatable-rw.php" class="sidebar-link"><span
-                                            class="hide-menu"> Data RW
-                                        </span></a>
-                                </li>
-                                <li class="sidebar-item"><a href="table-datatable-dawis.php" class="sidebar-link"><span
-                                            class="hide-menu"> Data Dawis
+                                <li class="sidebar-item"><a href="table-datatable-2.php" class="sidebar-link"><span
+                                            class="hide-menu"> Data Form 2
                                         </span></a>
                                 </li>
                             </ul>
                         </li>
+                        
                         <li class="list-divider"></li>
                         <li class="nav-small-cap"><span class="hide-menu">Pengelolaan Data</span></li>
 
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
-                            aria-expanded="false"><i data-feather="printer" class="feather-icon"></i><span
-                                class="hide-menu">Cetak Data
-                            </span></a>
-                            <ul aria-expanded="false" class="collapse first-level base-level-line">
-                                <li class="sidebar-item"><a href="print-data-rt.php" class="sidebar-link"><span
-                                            class="hide-menu"> Data RT </span></a></li>
-
-                                <li class="sidebar-item"><a href="print-data-rw.php" class="sidebar-link"><span
-                                            class="hide-menu"> Data RW </span></a></li>
-                                
-                                <li class="sidebar-item"><a href="print-data-dawis.php" class="sidebar-link"><span
-                                            class="hide-menu"> Data Dawis </span></a></li>
-                            </ul>
-                        </li>
-                        <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
-                                aria-expanded="false"><i data-feather="send" class="feather-icon"></i><span
-                                    class="hide-menu">Kirim Data
+                                aria-expanded="false"><i data-feather="printer" class="feather-icon"></i><span
+                                    class="hide-menu">Cetak Data
                                 </span></a>
                             <ul aria-expanded="false" class="collapse first-level base-level-line">
-                                <li class="sidebar-item"><a href="send-data-rt.php" class="sidebar-link"><span
-                                            class="hide-menu"> Data RT </span></a></li>
+                                <li class="sidebar-item"><a href="print-data-1.php" class="sidebar-link"><span
+                                            class="hide-menu"> Cetak Form 1 </span></a></li>
 
-                                <li class="sidebar-item"><a href="send-data-rw.php" class="sidebar-link"><span
-                                            class="hide-menu"> Data RW </span></a></li>
-                                
-                                <li class="sidebar-item"><a href="send-data-dawis.php" class="sidebar-link"><span
-                                            class="hide-menu"> Data Dawis </span></a></li>
+                                <li class="sidebar-item"><a href="print-data-2.php" class="sidebar-link"><span
+                                            class="hide-menu"> Cetak Form 2 </span></a></li>
                             </ul>
                         </li>
+
                         <li class="list-divider"></li>
                         <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="index.php"
                                 aria-expanded="false"><i data-feather="log-out" class="feather-icon"></i><span
@@ -226,12 +163,12 @@
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-7 align-self-center">
-                        <h4 class="page-title text-truncate text-dark font-weight-medium mb-1">Cetak Data PSN</h4>
+                        <h4 class="page-title text-truncate text-dark font-weight-medium mb-1">Data PSN</h4>
                         <div class="d-flex align-items-center">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb m-0 p-0">
                                     <li class="breadcrumb-item"><a href="index.php" class="text-muted">Home</a></li>
-                                    <li class="breadcrumb-item text-muted active" aria-current="page">Cetak Data Dawis</li>
+                                    <li class="breadcrumb-item text-muted active" aria-current="page">Data Form 2</li>
                                 </ol>
                             </nav>
                         </div>
@@ -248,19 +185,28 @@
                 <!-- ============================================================== -->
                 <!-- Start Page Content -->
                 <!-- ============================================================== -->
-                <div class="table-responsive">
-                <table id="printDawis" class="table table-striped table-bordered no-wrap">
-                                        <thead>
+                <!-- basic table -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                    <a href="https://datatables.net/">Datatables</a></h6>
+                                <div class="table-responsive">
+                                    <table id="zero_config" class="table table-striped table-bordered no-wrap">
+                                        <thead style="text-align: center";>
                                             <tr>
                                                 <th>ID</th>
                                                 <th>Tanggal</th>
-                                                <th>No Dawis</th>
+                                                <th>Kabupaten</th>
+                                                <th>Kecamatan</th>
+                                                <th>Kelurahan</th>
+                                                <th>Jumlah Rumah</th>
+                                                <th>No RT</th>
+                                                <th>Nama Dawis</th>
                                                 <th>Rumah Diperiksa</th>
                                                 <th>Rumah Positif</th>
                                                 <th>Bak</th>
                                                 <th>Bak Positif</th>
-                                                <th>Tandon</th>
-                                                <th>Tandon Positif</th>
                                                 <th>Tempayan</th>
                                                 <th>Tempayan Positif</th>
                                                 <th>Botol</th>
@@ -269,51 +215,58 @@
                                                 <th>Barang Bekas Positif</th>
                                                 <th>Kulkas</th>
                                                 <th>Kulkas Positif</th>
+                                                <th>Tandon</th>
+                                                <th>Tandon Positif</th>
                                                 <th>Vas</th>
                                                 <th>Vas Positif</th>
                                                 <th>Pot</th>
                                                 <th>Pot Positif</th>
-                                                <th>Dispenser</th>
-                                                <th>Dispenser Positif</th>
                                                 <th>Lain-lain</th>
                                                 <th>Lain-lain Positif</th>
+                                                <th>Aksi</th>
                                             </tr>
                                         </thead>
 
                                         <tbody>
                                         <?php
-                                        include "config.php";
                                         $no =1;
-                                        $tampil =mysqli_query($con, "SELECT * FROM data_dawis ORDER BY id ASC");
+                                        $tampil =mysqli_query($conn, "SELECT * FROM form_2 ORDER BY id ASC");
                                         while($data = mysqli_fetch_array($tampil)):
 
                                         ?>
                                             <tr>
                                                 <td><?= $no++ ?></td>
-                                                <td><?php echo $data["tanggal"]?></td>
-                                                <td><?php echo $data["no_dawis"]?></td>
-                                                <td><?php echo $data["jml_rmh_diperiksa"]?></td>
-                                                <td><?php echo $data["jml_rmh_pstf"]?></td>
-                                                <td><?php echo $data["jml_bak"]?></td>
-                                                <td><?php echo $data["jml_bak_ptf"]?></td>
-                                                <td><?php echo $data["jml_tandon"]?></td>
-                                                <td><?php echo $data["jml_tandon_pstf"]?></td>
-                                                <td><?php echo $data["jml_tmpyn"]?></td>
-                                                <td><?php echo $data["jml_tmpyn_pstf"]?></td>
-                                                <td><?php echo $data["jml_btl"]?></td>
-                                                <td><?php echo $data["jml_btl_pstf"]?></td>
-                                                <td><?php echo $data["jml_brg_bks"]?></td>
-                                                <td><?php echo $data["jml_brg_bks_pstf"]?></td>
-                                                <td><?php echo $data["jml_kulkas"]?></td>
-                                                <td><?php echo $data["jml_kulkas_pstf"]?></td>
-                                                <td><?php echo $data["jml_vas"]?></td>
-                                                <td><?php echo $data["jml_vas_pstf"]?></td>
-                                                <td><?php echo $data["jml_pot"]?></td>
-                                                <td><?php echo $data["jml_pot_pstf"]?></td>
-                                                <td><?php echo $data["jml_lain"]?></td>
-                                                <td><?php echo $data["jml_lain_pstf"]?></td>
-                                                <td><?php echo $data["jml_dispen"]?></td>
-                                                <td><?php echo $data["jml_dispen_pstf"]?></td>
+                                                <td><?=$data["tanggal"]?></td>
+                                                <td><?=$data["kabupaten"]?></td>
+                                                <td><?=$data["kecamatan"]?></td>
+                                                <td><?=$data["kelurahan"]?></td>
+                                                <td><?=$data["jml_rumah"]?></td>
+                                                <td><?=$data["no_rt"]?></td>
+                                                <td><?=$data["nama_dawis"]?></td>
+                                                <td><?=$data["jml_rmh_diperiksa"]?></td>
+                                                <td><?=$data["jml_rmh_pstf"]?></td>
+                                                <td><?=$data["jml_bak"]?></td>
+                                                <td><?=$data["jml_bak_pstf"]?></td>
+                                                <td><?=$data["jml_tmpyn"]?></td>
+                                                <td><?=$data["jml_tmpyn_pstf"]?></td>
+                                                <td><?=$data["jml_btl"]?></td>
+                                                <td><?=$data["jml_btl_pstf"]?></td>
+                                                <td><?=$data["jml_brg_bks"]?></td>
+                                                <td><?=$data["jml_brg_bks_pstf"]?></td>
+                                                <td><?=$data["jml_kulkas"]?></td>
+                                                <td><?=$data["jml_kulkas_pstf"]?></td>
+                                                <td><?=$data["jml_tandon"]?></td>
+                                                <td><?=$data["jml_tandon_pstf"]?></td>
+                                                <td><?=$data["jml_vas"]?></td>
+                                                <td><?=$data["jml_vas_pstf"]?></td>
+                                                <td><?=$data["jml_pot"]?></td>
+                                                <td><?=$data["jml_pot_pstf"]?></td>
+                                                <td><?=$data["jml_lain"]?></td>
+                                                <td><?=$data["jml_lain_pstf"]?></td>
+                                                <td width "158" class="text-center">
+                                                    <a href="ubah-data-2.php?id=<?=$data['id'];?>" name ="ubah" class= "btn btn-success">Ubah</a>
+                                                    <a href="hapus-data-2.php?id=<?=$data['id'];?>" name ="hapus"class= "btn btn-danger">Hapus</a>
+                                                </td>
 
                                                 
                                             </tr>
@@ -322,7 +275,11 @@
                                            
                                         </tbody>
                                         
-                    </table>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <!-- ============================================================== -->
                 <!-- End PAge Content -->
@@ -373,28 +330,6 @@
     <!--This page plugins -->
     <script src="assets/extra-libs/datatables.net/js/jquery.dataTables.min.js"></script>
     <script src="dist/js/pages/datatable/datatable-basic.init.js"></script>
-    <!-- yt -->
-    <script>
-    $(document).ready(function() {
-        $('#printDawis').DataTable( {
-            dom: 'Bfrtip',
-            buttons: [
-                'csv','excel', 'pdf', 'print'
-            ]
-        } );
-    } );
-
-    </script>
-
-    <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/1.6.5/js/dataTables.buttons.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.flash.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
-    <script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.html5.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.print.min.js"></script>
-    <!-- end yt -->
 </body>
 
 </html>

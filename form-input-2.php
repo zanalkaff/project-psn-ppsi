@@ -3,23 +3,20 @@
     include 'config/app.php';
 
     if(isset($_POST['simpan'])) {
-        if(tambah_data_dawis($_POST) > 0) {
+        if(tambah_data_2($_POST) > 0) {
             echo "<script>
                     alert('Data baru berhasil disimpan');
-                    document.location.href = 'table-datatable-dawis.php';
+                    document.location.href = 'table-datatable-2.php';
                 </script>";
         }else {
             echo "<script>
                 alert('Data gagal disimpan');
-                document.location.href = 'form-input-dawis.php';
+                document.location.href = 'form-input-2.php';
             </script>";
         }
     }
 
 ?>
-
-
-
 
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
@@ -68,7 +65,7 @@
                     <!-- ============================================================== -->
                     <div class="navbar-brand">
                         <!-- Logo icon -->
-                        <a href="index.php">
+                        <a href="dasboard.php">
                             <b class="logo-icon">
                                 <!-- Dark Logo icon -->
                                 <img src="assets/images/psnlogo.png" alt="homepage" class="dark-logo" />
@@ -93,43 +90,6 @@
                 <!-- ============================================================== -->
                 <!-- End Logo -->
                 <!-- ============================================================== -->
-                <div class="navbar-collapse collapse" id="navbarSupportedContent">
-                    <!-- ============================================================== -->
-                    <!-- toggle and nav items -->
-                    <!-- ============================================================== -->
-                    <ul class="navbar-nav float-left mr-auto ml-3 pl-1"></ul>
-                    <!-- ============================================================== -->
-                    <!-- Right side toggle and nav items -->
-                    <!-- ============================================================== -->
-                    <ul class="navbar-nav float-right">
-                        <!-- ============================================================== -->
-                        <!-- User profile and search -->
-                        <!-- ============================================================== -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="javascript:void(0)" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
-                                <img src="assets/images/users/psnlogo.png" alt="user" class="rounded-circle"
-                                    width="40">
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right user-dd animated flipInY">
-                                <a class="dropdown-item" href="javascript:void(0)"><i data-feather="user"
-                                        class="svg-icon mr-2 ml-1"></i>
-                                    My Profile</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="javascript:void(0)"><i data-feather="settings"
-                                        class="svg-icon mr-2 ml-1"></i>
-                                    Account Setting</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="javascript:void(0)"><i data-feather="power"
-                                        class="svg-icon mr-2 ml-1"></i>
-                                    Logout</a>
-                            </div>
-                        </li>
-                        <!-- ============================================================== -->
-                        <!-- User profile and search -->
-                        <!-- ============================================================== -->
-                    </ul>
-                </div>
             </nav>
         </header>
         <!-- ============================================================== -->
@@ -154,16 +114,12 @@
                                 aria-expanded="false"><i data-feather="file-plus" class="feather-icon"></i><span
                                     class="hide-menu">Input Data PSN </span></a>
                             <ul aria-expanded="false" class="collapse  first-level base-level-line">
-                                <li class="sidebar-item"><a href="form-input-rt.php" class="sidebar-link"><span
-                                            class="hide-menu"> Input Data RT
+                                <li class="sidebar-item"><a href="form-input-1.php" class="sidebar-link"><span
+                                            class="hide-menu"> Input Form 1
                                         </span></a>
                                 </li>
-                                <li class="sidebar-item"><a href="form-input-rw.php" class="sidebar-link"><span
-                                            class="hide-menu"> Input Data RW
-                                        </span></a>
-                                </li>
-                                <li class="sidebar-item"><a href="form-input-dawis.php" class="sidebar-link"><span
-                                            class="hide-menu"> Input Data Dawis
+                                <li class="sidebar-item"><a href="form-input-2.php" class="sidebar-link"><span
+                                            class="hide-menu"> Input Form 2
                                         </span></a>
                                 </li>
                             </ul>
@@ -172,53 +128,33 @@
                             aria-expanded="false"><i data-feather="file-text" class="feather-icon"></i><span
                                 class="hide-menu">Data PSN </span></a>
                             <ul aria-expanded="false" class="collapse  first-level base-level-line">
-                                <li class="sidebar-item"><a href="table-datatable-rt.php" class="sidebar-link"><span
-                                            class="hide-menu"> Data RT
+                                <li class="sidebar-item"><a href="table-datatable-1.php" class="sidebar-link"><span
+                                            class="hide-menu"> Data Form 1
                                         </span></a>
                                 </li>
-                                <li class="sidebar-item"><a href="table-datatable-rw.php" class="sidebar-link"><span
-                                            class="hide-menu"> Data RW
-                                        </span></a>
-                                </li>
-                                <li class="sidebar-item"><a href="table-datatable-dawis.php" class="sidebar-link"><span
-                                            class="hide-menu"> Data Dawis
+                                <li class="sidebar-item"><a href="table-datatable-2.php" class="sidebar-link"><span
+                                            class="hide-menu"> Data Form 2
                                         </span></a>
                                 </li>
                             </ul>
                         </li>
+                        
                         <li class="list-divider"></li>
                         <li class="nav-small-cap"><span class="hide-menu">Pengelolaan Data</span></li>
 
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
-                            aria-expanded="false"><i data-feather="printer" class="feather-icon"></i><span
-                                class="hide-menu">Cetak Data
-                            </span></a>
-                            <ul aria-expanded="false" class="collapse first-level base-level-line">
-                                <li class="sidebar-item"><a href="print-data-rt.php" class="sidebar-link"><span
-                                            class="hide-menu"> Data RT </span></a></li>
-
-                                <li class="sidebar-item"><a href="print-data-rw.php" class="sidebar-link"><span
-                                            class="hide-menu"> Data RW </span></a></li>
-                                
-                                <li class="sidebar-item"><a href="print-data-dawis.php" class="sidebar-link"><span
-                                            class="hide-menu"> Data Dawis </span></a></li>
-                            </ul>
-                        </li>
-                        <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
-                                aria-expanded="false"><i data-feather="send" class="feather-icon"></i><span
-                                    class="hide-menu">Kirim Data
+                                aria-expanded="false"><i data-feather="printer" class="feather-icon"></i><span
+                                    class="hide-menu">Cetak Data
                                 </span></a>
                             <ul aria-expanded="false" class="collapse first-level base-level-line">
-                                <li class="sidebar-item"><a href="send-data-rt.php" class="sidebar-link"><span
-                                            class="hide-menu"> Data RT </span></a></li>
+                                <li class="sidebar-item"><a href="print-data-1.php" class="sidebar-link"><span
+                                            class="hide-menu"> Cetak Form 1 </span></a></li>
 
-                                <li class="sidebar-item"><a href="send-data-rw.php" class="sidebar-link"><span
-                                            class="hide-menu"> Data RW </span></a></li>
-                                
-                                <li class="sidebar-item"><a href="send-data-dawis.php" class="sidebar-link"><span
-                                            class="hide-menu"> Data Dawis </span></a></li>
+                                <li class="sidebar-item"><a href="print-data-2.php" class="sidebar-link"><span
+                                            class="hide-menu"> Cetak Form 2 </span></a></li>
                             </ul>
                         </li>
+
                         <li class="list-divider"></li>
                         <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="index.php"
                                 aria-expanded="false"><i data-feather="log-out" class="feather-icon"></i><span
@@ -242,12 +178,12 @@
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-7 align-self-center">
-                        <h4 class="page-title text-truncate text-dark font-weight-medium mb-1">Form PSN Input Data Dawis</h4>
+                        <h4 class="page-title text-truncate text-dark font-weight-medium mb-1">Input Data PSN</h4>
                         <div class="d-flex align-items-center">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb m-0 p-0">
                                     <li class="breadcrumb-item"><a href="index.php" class="text-muted">Home</a></li>
-                                    <li class="breadcrumb-item text-muted active" aria-current="page">Input Data Dawis</li>
+                                    <li class="breadcrumb-item text-muted active" aria-current="page">Input Form 2</li>
                                 </ol>
                             </nav>
                         </div>
@@ -279,9 +215,59 @@
                         <div class="col-sm-9 col-md-6 col-lg-3">
                             <div class="card">
                                 <div class="card-body">
+                                    <h4 class="card-title">Kabupaten</h4>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" required name="kabupaten">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-9 col-md-6 col-lg-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">Kecamatan</h4>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" required name="kecamatan">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-9 col-md-6 col-lg-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">Kelurahan</h4>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" required name="kelurahan">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-9 col-md-6 col-lg-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">Jumlah Rumah</h4>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" required name="jml_rumah">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-9 col-md-6 col-lg-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">No RT</h4>
+                                    <div class="form-group">
+                                        <input type="number" class="form-control" required name="no_rt">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-9 col-md-6 col-lg-3">
+                            <div class="card">
+                                <div class="card-body">
                                     <h4 class="card-title">Nama Dawis</h4>
                                     <div class="form-group">
-                                        <input type="text" class="form-control" required name="no_dawis">
+                                        <input type="text" class="form-control" required name="nama_dawis">
                                     </div>
                                 </div>
                             </div>
@@ -462,26 +448,6 @@
                                     <h4 class="card-title">Jumlah Pot Positif</h4>
                                     <div class="form-group">
                                         <input type="number" class="form-control" required name="jml_pot_pstf">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-9 col-md-6 col-lg-3">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h4 class="card-title">Jumlah Dispenser</h4>
-                                    <div class="form-group">
-                                        <input type="number" class="form-control" required name="jml_dispen">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-9 col-md-6 col-lg-3">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h4 class="card-title">Jumlah Dispenser Positif</h4>
-                                    <div class="form-group">
-                                        <input type="number" class="form-control" required name="jml_dispen_pstf">
                                     </div>
                                 </div>
                             </div>
