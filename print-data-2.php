@@ -15,7 +15,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/Logo1.png">
-    <title>M-PSN.com</title>
+    <title>M-PSN Desa Kebumen</title>
     <!-- Custom CSS -->
     <link href="dist/css/style.min.css" rel="stylesheet">
     <!-- php5 Shim and Respond.js IE8 support of php5 elements and media queries -->
