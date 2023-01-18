@@ -1,6 +1,13 @@
 <?php 
+    
+    session_start();
 
     include 'config/app.php';
+
+    if(!isset($_SESSION['session_email'])) {
+        header('location:index.php');
+        exit();
+    }
 
     if(isset($_POST['simpan'])) {
         if(tambah_data_2($_POST) > 0) {
@@ -156,7 +163,7 @@
                         </li>
 
                         <li class="list-divider"></li>
-                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="index.php"
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="logout.php"
                                 aria-expanded="false"><i data-feather="log-out" class="feather-icon"></i><span
                                     class="hide-menu">Logout</span></a></li>
                     </ul>

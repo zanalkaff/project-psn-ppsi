@@ -3,33 +3,29 @@
     include "config/app.php";
 
     session_start();
-    if(isset($_SESSION['nama'])){
-        header("location:dasboard.php");
-    }
+    // if(isset($_SESSION['nama'])){
+    //     header("location:dasboard.php");
+    // }
 
-    if (isset($_POST["submit"])){
+    if(isset($_POST["submit"])){
         $nama = $_POST["nama"];
         $email =  $_POST["email"];
         $password = $_POST["password"];
         
-        if($password){
-            $sql="SELECT *FROM admin_form where email='$email'";
-            $result =mysqli_query($conn,$sql);
-            if(!$result-> num_rows >0){
-            $sql = "INSERT INTO admin_form (nama,email,password)
-                        values ('$nama','$email','$password')";
-                $result = mysqli_query($conn,$sql);
-                if($result){
-                    echo "<script> alert('user regis complete')</script>";
-                    $nama ="";
-                    $email ="";
-                    $_POST['password']="";
-                }  else{
-                    echo "<script> alert('user regis failed')</script>";
-                }
-            }else{
-                echo "<script> alert('email already')</script>";
+        $sql = "SELECT * FROM admin_form where email='$email'";
+        $result = mysqli_query($conn,$sql);
+        if(!$result-> num_rows >0) {
+            $sql2 = "INSERT INTO admin_form (nama,email,password)
+                    values ('$nama','$email','$password')";
+            $result2 = mysqli_query($conn,$sql2);
+            if($result2){
+                echo "<script> alert('Registrasi akun berhasil!')</script>";
+                $nama ="";
+                $email ="";
+                $_POST['password']="";
             }
+        }else{
+            echo "<script> alert('Registrasi akun gagal!')</script>";
         }
     }
 
@@ -83,17 +79,17 @@
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="form-group">
-                                        <input class="form-control" type="text" placeholder="masukkan nama" name="nama">
+                                        <input required class="form-control" type="text" placeholder="masukkan nama" name="nama">
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group">
-                                        <input class="form-control" type="email" placeholder="masukkan email" name="email">
+                                        <input required class="form-control" type="email" placeholder="masukkan email" name="email">
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group">
-                                        <input class="form-control" type="password" placeholder="password" name="password">
+                                        <input required class="form-control" type="password" placeholder="password" name="password">
                                     </div>
                                
                                 <div class="col-lg-12 text-center">

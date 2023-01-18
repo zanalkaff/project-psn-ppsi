@@ -6,9 +6,9 @@
 
     error_reporting(0);
 
-    if (isset($_SESSION['email'])) {
-        header("Location: dasboard.php");
-    }
+    // if (isset($_SESSION['email'])) {
+    //     header("Location: dasboard.php");
+    // }
 
     if (isset($_POST['submit'])) {
         $email = $_POST['email'];
@@ -18,6 +18,8 @@
         $result = mysqli_query($conn, $sql);
         if ($result->num_rows > 0) {
             $row = mysqli_fetch_assoc($result);
+            $_SESSION['session_email'] = $email;
+            $_SESSION['session_password'] = $password;
             header("Location: dasboard.php");
         } else {
             echo "<script>alert('Woops! Email Atau Password anda Salah.')</script>";
@@ -80,14 +82,14 @@
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <label class="text-dark" for="email">Email</label>
-                                        <input class="form-control" id="email" type="email"
+                                        <input required class="form-control" id="email" type="email"
                                             placeholder="masukkan email" name="email">
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <label class="text-dark" for="password">Password</label>
-                                        <input class="form-control" id="password" type="password"
+                                        <input required class="form-control" id="password" type="password"
                                             placeholder="masukkan password" name="password">
                                     </div>
                                 </div>

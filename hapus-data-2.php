@@ -1,5 +1,12 @@
 <?php
+    session_start();
+    
     include 'config/app.php';
+    
+    if(!isset($_SESSION['session_email'])) {
+        header('location:index.php');
+        exit();
+    }
 
     $id =(int)$_GET['id'];
 

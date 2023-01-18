@@ -1,10 +1,16 @@
 <?php 
 
-    include 'config/app.php';
+    session_start();
 
+    include 'config/app.php';
+    
+    if(!isset($_SESSION['session_email'])) {
+        header('location:index.php');
+        exit();
+    }
+    
     $id =(int)$_GET['id'];
     $data =select ("SELECT*FROM form_1 WHERE id =$id")[0];
-
 
     if(isset($_POST['ubah'])) {
         if(update_data_1($_POST) > 0) {
