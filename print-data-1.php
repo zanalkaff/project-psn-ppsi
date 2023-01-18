@@ -106,11 +106,11 @@
                                     class="hide-menu">Input Data PSN </span></a>
                             <ul aria-expanded="false" class="collapse  first-level base-level-line">
                                 <li class="sidebar-item"><a href="form-input-1.php" class="sidebar-link"><span
-                                            class="hide-menu"> Input Form 1
+                                            class="hide-menu"> Input Data Dawis
                                         </span></a>
                                 </li>
                                 <li class="sidebar-item"><a href="form-input-2.php" class="sidebar-link"><span
-                                            class="hide-menu"> Input Form 2
+                                            class="hide-menu"> Input Data RT
                                         </span></a>
                                 </li>
                             </ul>
@@ -120,11 +120,11 @@
                                 class="hide-menu">Data PSN </span></a>
                             <ul aria-expanded="false" class="collapse  first-level base-level-line">
                                 <li class="sidebar-item"><a href="table-datatable-1.php" class="sidebar-link"><span
-                                            class="hide-menu"> Data Form 1
+                                            class="hide-menu"> Data Dawis
                                         </span></a>
                                 </li>
                                 <li class="sidebar-item"><a href="table-datatable-2.php" class="sidebar-link"><span
-                                            class="hide-menu"> Data Form 2
+                                            class="hide-menu"> Data RT
                                         </span></a>
                                 </li>
                             </ul>
@@ -139,10 +139,10 @@
                                 </span></a>
                             <ul aria-expanded="false" class="collapse first-level base-level-line">
                                 <li class="sidebar-item"><a href="print-data-1.php" class="sidebar-link"><span
-                                            class="hide-menu"> Cetak Form 1 </span></a></li>
+                                            class="hide-menu"> Cetak Data Dawis </span></a></li>
 
                                 <li class="sidebar-item"><a href="print-data-2.php" class="sidebar-link"><span
-                                            class="hide-menu"> Cetak Form 2 </span></a></li>
+                                            class="hide-menu"> Cetak Data RT </span></a></li>
                             </ul>
                         </li>
 
@@ -174,7 +174,7 @@
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb m-0 p-0">
                                     <li class="breadcrumb-item"><a href="index.php" class="text-muted">Home</a></li>
-                                    <li class="breadcrumb-item text-muted active" aria-current="page">Cetak Form 1</li>
+                                    <li class="breadcrumb-item text-muted active" aria-current="page">Cetak Data RT</li>
                                 </ol>
                             </nav>
                         </div>

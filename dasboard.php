@@ -100,11 +100,11 @@
                                     class="hide-menu">Input Data PSN </span></a>
                             <ul aria-expanded="false" class="collapse  first-level base-level-line">
                                 <li class="sidebar-item"><a href="form-input-1.php" class="sidebar-link"><span
-                                            class="hide-menu"> Input Form 1
+                                            class="hide-menu"> Input Data Dawis
                                         </span></a>
                                 </li>
                                 <li class="sidebar-item"><a href="form-input-2.php" class="sidebar-link"><span
-                                            class="hide-menu"> Input Form 2
+                                            class="hide-menu"> Input Data RT
                                         </span></a>
                                 </li>
                             </ul>
@@ -114,11 +114,11 @@
                                 class="hide-menu">Data PSN </span></a>
                             <ul aria-expanded="false" class="collapse  first-level base-level-line">
                                 <li class="sidebar-item"><a href="table-datatable-1.php" class="sidebar-link"><span
-                                            class="hide-menu"> Data Form 1
+                                            class="hide-menu"> Data Dawis
                                         </span></a>
                                 </li>
                                 <li class="sidebar-item"><a href="table-datatable-2.php" class="sidebar-link"><span
-                                            class="hide-menu"> Data Form 2
+                                            class="hide-menu"> Data RT
                                         </span></a>
                                 </li>
                             </ul>
@@ -133,10 +133,10 @@
                                 </span></a>
                             <ul aria-expanded="false" class="collapse first-level base-level-line">
                                 <li class="sidebar-item"><a href="print-data-1.php" class="sidebar-link"><span
-                                            class="hide-menu"> Cetak Form 1 </span></a></li>
+                                            class="hide-menu"> Cetak Data Dawis </span></a></li>
 
                                 <li class="sidebar-item"><a href="print-data-2.php" class="sidebar-link"><span
-                                            class="hide-menu"> Cetak Form 2 </span></a></li>
+                                            class="hide-menu"> Cetak Data RT </span></a></li>
                             </ul>
                         </li>
 
@@ -191,7 +191,7 @@
                             <div class="d-flex d-lg-flex d-md-block align-items-center">
                                 <div>
                                     <div class="d-inline-flex align-items-center">
-                                        <h2 class="text-dark mb-1 font-weight-medium">Input Form 1</h2>
+                                        <h2 class="text-dark mb-1 font-weight-medium">Input Data Dawis</h2>
                                     </div>
                                 </div>
                                 <div class="ml-auto mt-md-3 mt-lg-0">
@@ -205,7 +205,7 @@
                             <div class="d-flex d-lg-flex d-md-block align-items-center">
                                 <div>
                                     <div class="d-inline-flex align-items-center">
-                                        <h2 class="text-dark mb-1 font-weight-medium">Input Form 2</h2>
+                                        <h2 class="text-dark mb-1 font-weight-medium">Input Data RT</h2>
                                     </div>
                                 </div>
                                 <div class="ml-auto mt-md-3 mt-lg-0">
@@ -221,7 +221,7 @@
                             <div class="d-flex d-lg-flex d-md-block align-items-center">
                                 <div>
                                     <div class="d-inline-flex align-items-center">
-                                        <h2 class="text-dark mb-1 font-weight-medium">Data Form 1</h2>
+                                        <h2 class="text-dark mb-1 font-weight-medium">Data Dawis</h2>
                                     </div>
                                 </div>
                                 <div class="ml-auto mt-md-3 mt-lg-0">
@@ -235,7 +235,7 @@
                             <div class="d-flex d-lg-flex d-md-block align-items-center">
                                 <div>
                                     <div class="d-inline-flex align-items-center">
-                                        <h2 class="text-dark mb-1 font-weight-medium">Data Form 2</h2>
+                                        <h2 class="text-dark mb-1 font-weight-medium">Data RT</h2>
                                     </div>
                                 </div>
                                 <div class="ml-auto mt-md-3 mt-lg-0">
@@ -251,7 +251,7 @@
                             <div class="d-flex d-lg-flex d-md-block align-items-center">
                                 <div>
                                     <div class="d-inline-flex align-items-center">
-                                        <h2 class="text-dark mb-1 font-weight-medium">Cetak Form 1</h2>
+                                        <h2 class="text-dark mb-1 font-weight-medium">Cetak Data Dawis</h2>
                                     </div>
                                 </div>
                                 <div class="ml-auto mt-md-3 mt-lg-0">
@@ -265,7 +265,7 @@
                             <div class="d-flex d-lg-flex d-md-block align-items-center">
                                 <div>
                                     <div class="d-inline-flex align-items-center">
-                                        <h2 class="text-dark mb-1 font-weight-medium">Cetak Form 2</h2>
+                                        <h2 class="text-dark mb-1 font-weight-medium">Cetak Data RT</h2>
                                     </div>
                                 </div>
                                 <div class="ml-auto mt-md-3 mt-lg-0">
